@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <title>Course Registration</title>
+</head>
+<body>
+
+    <h1>Course Registration Form</h1>
+
+    <form>
+        <fieldset>
+            <legend>Student Information</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="student_name" required>
+
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="student_email" required>
+
+            <br><br>
+
+            <label for="course">Select a Course:</label>
+            <select id="course" name="course_selection">
+                <option value="web-dev">Web Development 101</option>
+                <option value="data-sci">Introduction to Data Science</option>
+                <option value="ux-design">UX/UI Design Fundamentals</option>
+                <option value="cyber-sec">Cybersecurity Basics</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Available Course Schedules</legend>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Instructor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday & Wednesday</td>
+                        <td>10:00 AM - 11:30 AM</td>
+                        <td>Dr. Smith</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday & Thursday</td>
+                        <td>2:00 PM - 3:30 PM</td>
+                        <td>Prof. Jones</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>9:00 AM - 12:00 PM</td>
+                        <td>Mr. Davis</td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>
