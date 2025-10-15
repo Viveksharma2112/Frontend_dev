@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Security Example</title>
+</head>
+<body>
+    <h1>Secure Form Example</h1>
+
+    <form autocomplete="off">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Note:</h3>
+    <p>
+        Setting <code>autocomplete="off"</code> prevents the browser from storing and suggesting previously entered
+        values for sensitive fields like passwords. This can improve security by reducing the risk of
+        unauthorized access if someone else uses the same device or if the browser's saved data is compromised.
+    </p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Page</title>
+</head>
+<body>
+    <h1>Form Submission Example</h1>
+
+    <form action="result.html" method="get" target="resultFrame">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Result:</h2>
+    <iframe name="resultFrame" width="400" height="100" style="border:1px solid #000;"></iframe>
+</body>
+</html>
