@@ -1,0 +1,156 @@
+/* Base Reset and Layout Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Set up the body to be a flex container for the "sticky footer" layout */
+    min-height: 100vh; /* vh unit used for full viewport height */
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e; /* Custom dark background color */
+    color: #e4e6f0; /* Custom light text color for contrast */
+}
+
+/* 1. Header (position: fixed) */
+header {
+    /* Use position: fixed to keep the header at the top when scrolling */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* % unit used for full width */
+    height: 60px; /* px unit used for fixed height */
+    background-color: rgba(26, 26, 46, 0.95); /* Slightly transparent background for the fixed header */
+    color: #ff8906; /* Accent color for logo/links */
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure the header stays on top of other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 1.5rem; /* rem unit used for scalable font size */
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e4e6f0;
+    font-size: 1.1em; /* em unit used relative to parent font size */
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff8906;
+}
+
+/* 2. Main Content and Offset for Fixed Header */
+main {
+    /* The main content needs padding at the top equal to the header's height to prevent content from being hidden */
+    padding-top: 60px; /* px unit used to offset the fixed header */
+    flex-grow: 1; /* Allows main to take up all available space, pushing the footer down */
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    min-height: calc(100vh - 60px - 50px); /* 100vh - header height - footer height */
+    gap: 40px;
+}
+
+.bio-content {
+    flex: 1;
+    max-width: 60%; /* % unit for responsive width */
+}
+
+.main-title {
+    font-size: 3rem;
+    color: #ff8906;
+    margin-bottom: 0.5rem;
+}
+
+.bio-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.profile-image-container {
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 250px; /* px unit for fixed image width */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff8906;
+    box-shadow: 0 0 20px rgba(255, 137, 6, 0.5);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff8906;
+    color: #1a1a2e;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ffc94a;
+}
+
+/* Placeholder content styling */
+.placeholder-content {
+    padding: 20px 0;
+    border-top: 1px dashed #3e3e5c;
+    margin-top: 20px;
+}
+
+.placeholder-content p {
+    margin-bottom: 1em; /* em unit for paragraph spacing */
+}
+
+/* 3. Footer (Stay at the bottom using Flexbox) */
+footer {
+    /* Since body is flex-direction: column and main has flex-grow: 1, the footer will be pushed to the bottom */
+    width: 100%;
+    padding: 15px 5%;
+    background-color: #0f0f1b;
+    text-align: center;
+    color: #9a9a9a;
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .bio-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}

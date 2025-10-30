@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Mastery Layout</title>
+    <link rel="stylesheet" href="mastery.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">CSS Master</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-text">
+                <h1>Crafting Beautiful, Responsive Web Experiences</h1>
+                <p>Advanced layouts and semantic code built with pure HTML & CSS.</p>
+                <a href="#contact" class="cta-button">Start a Project</a>
+            </div>
+            <div class="absolute-badge">NEW</div>
+        </section>
+
+        <section id="about" class="about-section content-padding">
+            <h2>About Our Approach</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>We believe that a strong foundation in core web technologies is paramount. Our work prioritizes **performance**, **accessibility**, and **clean code**. We use modern CSS features, ensuring our layouts are fluid and adaptable to any device.</p>
+                    <p>Every element is styled with attention to the Box Model, ensuring perfect alignment and predictable spacing. Our commitment is to quality, not just trends.</p>
+                    <div class="outline-demo">
+                        This box uses the **outline** property.
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/400x300?text=Development+Concept" alt="Clean code concept image">
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section content-padding">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-box">
+                    <h3>Semantic HTML5</h3>
+                    <p>Building with meaningful structure for better SEO and accessibility.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Advanced CSS3</h3>
+                    <p>Mastery of Flexbox, Grid, animations, and modern responsive design.</p>
+                </div>
+                <div class="service-box">
+                    <h3>UI/UX Design</h3>
+                    <p>Focusing on user-centered design to deliver intuitive interfaces.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section content-padding">
+            <h2>Let's Talk</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Inquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CSS Mastery Demo. All rights reserved. | Built with Semantic HTML and Pure CSS.</p>
+    </footer>
+</body>
+</html>

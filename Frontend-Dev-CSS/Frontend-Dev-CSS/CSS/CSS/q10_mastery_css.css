@@ -1,0 +1,255 @@
+/* Base Styling & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Crucial for Box Model mastery */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.content-padding {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* 1. Header with Sticky Positioning */
+.main-header {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+    /* Sticky Positioning */
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #f1c40f;
+}
+
+/* 2. Hero Section (Background Image + Centered Text + Positioning) */
+.hero-section {
+    height: 80vh; /* Relative unit for height */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1600x900/1abc9c/ffffff?text=HERO+BACKGROUND');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative; /* Relative positioning for child absolute badge */
+}
+
+.hero-text h1 {
+    font-size: 3.5rem; /* rem unit */
+    margin-bottom: 10px;
+    color: white;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #d35400;
+}
+
+/* Absolute Positioning Demo */
+.absolute-badge {
+    position: absolute; /* Absolute positioning relative to .hero-section */
+    top: 20px;
+    right: 20px;
+    background-color: #f1c40f;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* 3. About Section (Two Columns) */
+.about-content {
+    display: flex; /* Flexbox for column alignment */
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 2; /* Takes up more space */
+}
+
+.about-image {
+    flex: 1;
+    border: 5px solid #bdc3c7;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+}
+
+.outline-demo {
+    /* Outline property demo */
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #c0392b;
+    outline: 5px dashed #e74c3c;
+    outline-offset: 5px;
+    font-size: 0.9rem;
+    color: #c0392b;
+}
+
+/* 4. Services Section (Three Boxes - Grid for alignment) */
+.services-section {
+    background: #ecf0f1;
+}
+
+.services-grid {
+    display: grid; /* Grid for equal-height boxes in a row */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: 5px solid #3498db;
+    transition: transform 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+/* 5. Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #16a085;
+}
+
+/* 6. Footer (RGBA and Positioning) */
+footer {
+    /* RGBA color for slight transparency */
+    background-color: rgba(44, 62, 80, 0.95); 
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Alignment */
+@media (max-width: 800px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+    
+    .main-nav {
+        margin-top: 10px;
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .about-image {
+        order: -1; /* Move image above text on small screens */
+        margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+}

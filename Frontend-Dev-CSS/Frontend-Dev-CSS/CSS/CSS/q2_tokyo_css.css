@@ -1,0 +1,145 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #d82b27; /* Red accent */
+    color: white;
+    padding: 2em 1em; /* em unit for proportional padding */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3.5rem; /* rem unit */
+    font-weight: 900;
+}
+
+nav {
+    background-color: #212121;
+    padding: 0.8em 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 1.1em;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #d82b27;
+}
+
+/* Main Content and Section Styling */
+main {
+    width: 100%;
+}
+
+section {
+    padding: 80px 10%; /* % unit for horizontal padding */
+    margin: 30px 0;
+    border: 5px solid transparent; /* Base border */
+    min-height: 40vh; /* vh unit for minimum height */
+}
+
+section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid;
+}
+
+section p {
+    margin-bottom: 15px; /* px unit for spacing */
+}
+
+/* Section Specific Styles */
+
+/* Section 1: Introduction */
+.section-intro {
+    background-color: #f0f0f0;
+    border-color: #333;
+}
+.section-intro h2 { border-bottom-color: #333; }
+
+/* Section 2: Culture (Radial Gradient) */
+.section-culture {
+    /* Use radial gradient */
+    background: radial-gradient(circle at top left, #e9e4f0, #c4b9d0);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.section-culture h2 { 
+    color: #5d4037;
+    border-bottom-color: #5d4037; 
+}
+
+/* Section 3: Modernity (Parallax Effect 1) */
+.section-modernity {
+    color: white;
+    background-image: url('https://via.placeholder.com/1200x600/505050/ffffff?text=TOKYO+SKYSCRAPERS');
+    background-size: cover;
+    background-position: center;
+    /* Parallax effect: background-attachment: fixed */
+    background-attachment: fixed;
+    border-color: #00bcd4;
+}
+.section-modernity h2 { border-bottom-color: white; }
+
+/* Section 4: Parallax Effect 2 */
+.section-parallax-2 {
+    color: white;
+    background-image: url('https://via.placeholder.com/1200x600/303030/ffffff?text=TOKYO+STREET+VIEW');
+    background-size: cover;
+    background-position: bottom;
+    /* Parallax effect: background-attachment: fixed */
+    background-attachment: fixed;
+    margin: 0; /* Remove top/bottom margin for a full-bleed look */
+    padding: 100px 10%;
+}
+.section-parallax-2 h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Section 5: Food (Linear Gradient) */
+.section-food {
+    /* Use linear gradient */
+    background: linear-gradient(to right, #ffcc33, #e65100);
+    color: #1a1a1a;
+    border-style: dotted;
+    border-width: 5px;
+    border-color: #1a1a1a;
+}
+.section-food h2 { border-bottom-color: #1a1a1a; }
+
+
+/* Footer */
+footer {
+    background-color: #212121;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}

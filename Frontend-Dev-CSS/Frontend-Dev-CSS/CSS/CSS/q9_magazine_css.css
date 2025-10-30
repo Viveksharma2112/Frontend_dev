@@ -1,0 +1,99 @@
+/* Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif; /* Custom font styles */
+    background-color: #f7f3e8; /* Background color for the page */
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0 10px 0;
+    font-size: 0.8rem;
+    color: #555;
+    letter-spacing: 2px;
+}
+
+/* Main Content Area */
+.magazine-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px; /* Padding around the main content area */
+}
+
+/* Main Article Title */
+.main-title {
+    font-size: 3rem;
+    font-family: 'Garamond', serif;
+    font-weight: 700;
+    color: #3d0000;
+    margin-bottom: 30px;
+    line-height: 1.1;
+    
+    /* Heading spans all columns */
+    column-span: all; 
+}
+
+/* CSS Column Structure */
+.columns-container {
+    /* Create three vertical text columns */
+    column-count: 3;
+    /* Spacing between columns */
+    column-gap: 40px; 
+    /* Optional: Add a vertical separator line */
+    column-rule: 1px solid #ccc;
+}
+
+/* Paragraph and Text Styling */
+.columns-container p {
+    margin-bottom: 1em;
+    /* Justify all text */
+    text-align: justify; 
+    hyphens: auto; /* Improves text justification */
+}
+
+/* Image Aligned to the Left (Float) */
+.float-image {
+    /* Float the image to the left */
+    float: left;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 20px 10px 0; /* Margin for text wrapping */
+    border: 5px double #3d0000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Layout */
+@media (max-width: 800px) {
+    /* Adjust to two columns on medium screens */
+    .columns-container {
+        column-count: 2;
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Adjust to a single column on small screens for readability */
+    .magazine-content {
+        padding: 20px;
+    }
+    .columns-container {
+        column-count: 1;
+    }
+    .main-title {
+        font-size: 2rem;
+    }
+    .float-image {
+        float: none; /* Disable float on small screens */
+        display: block;
+        max-width: 100%;
+        margin: 0 auto 15px auto;
+    }
+}

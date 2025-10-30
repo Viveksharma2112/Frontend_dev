@@ -1,0 +1,81 @@
+/* Base Styling */
+body {
+    font-family: Georgia, serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.main-article {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 2.5rem;
+    color: #4a4e69;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.subheading {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+/* Paragraph Styling using CSS pseudo-elements and margins */
+.article-body p {
+    margin-bottom: 1.5em; /* Consistent spacing between paragraphs */
+    text-align: justify;
+}
+
+/* 1. Style the first line of each paragraph */
+.article-body p::first-line {
+    font-weight: bold; /* Make the first line bold */
+    color: #222;
+}
+
+/* 2. Style the first letter of each paragraph */
+.article-body p::first-letter {
+    font-size: 3em; /* Larger font for the first letter */
+    color: #4a4e69;
+    float: left; /* Make it float to create a drop-cap effect */
+    line-height: 1;
+    margin-right: 0.1em;
+    font-weight: 700;
+}
+
+/* 3. Highlighted Keywords (Mark Tag) */
+mark {
+    background-color: #f7e651; /* Custom background color for mark */
+    color: #333;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* 4. Blockquote Emphasis */
+blockquote {
+    /* Left border and background color emphasis */
+    border-left: 5px solid #a2a2c5;
+    background-color: #e9e9f4;
+    padding: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: #555;
+}
+
+blockquote::before {
+    content: "\201C"; /* Left double quotation mark */
+    font-size: 2em;
+    line-height: 0.1em;
+    margin-right: 0.1em;
+    vertical-align: -0.4em;
+    color: #a2a2c5;
+}

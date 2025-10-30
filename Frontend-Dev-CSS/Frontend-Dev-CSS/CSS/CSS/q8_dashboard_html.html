@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo">Admin Panel</div>
+        <div class="user-info">Welcome, User</div>
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Dashboard</a></li>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Reports</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <h1>Overview</h1>
+            
+            <div class="content-grid">
+                <section class="content-box sales-box">
+                    <h2>Monthly Sales</h2>
+                    <p class="data-point">$12,500</p>
+                    <p class="detail">20% increase from last month.</p>
+                </section>
+
+                <section class="content-box user-box">
+                    <h2>New Users</h2>
+                    <p class="data-point">350</p>
+                    <p class="detail">Yesterday's sign-ups.</p>
+                </section>
+                
+                <section class="content-box task-box">
+                    <h2>Open Tasks</h2>
+                    <p class="data-point">12</p>
+                    <p class="detail">Urgent action required.</p>
+                </section>
+            </div>
+            
+            <section class="full-width-box">
+                <h2>Activity Log</h2>
+                <ul>
+                    <li>User 'Jane' updated settings. (5m ago)</li>
+                    <li>Report 'Q3 Data' generated. (1h ago)</li>
+                    <li>Server health: Optimal. (3h ago)</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
+    /* Consistent theme colors */
+    background-color: #f0f4f8; 
+    color: #334e68;
+    min-height: 100vh;
+    display: flex; /* Flexbox for centering */
+}
+
+/* Center the Form Vertically and Horizontally */
+.contact-page {
+    /* Main container uses flexbox to center its content (the form-container) */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-grow: 1; /* Allows it to take up full body height */
+    padding: 20px;
+}
+
+.form-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(51, 78, 104, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-container h1 {
+    font-size: 2rem;
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    margin-bottom: 25px;
+    color: #627d98;
+}
+
+/* Form Group Spacing */
+.form-group {
+    margin-bottom: 20px; /* Spacing between fields */
+}
+
+.form-group label {
+    display: block; /* Ensures label takes full width */
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334e68;
+    text-align: left;
+}
+
+/* Input and Textarea Styling */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px; /* Padding for inputs */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* :focus selector for color change on focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2cb67d; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(44, 182, 125, 0.3); /* Custom focus ring */
+}
+
+/* Textarea specific height adjustment */
+.contact-form textarea {
+    resize: vertical; /* Allow resizing only vertically */
+}
+
+/* Submit Button Styling */
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #2cb67d; /* Background color for consistent theme */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-button:hover {
+    background-color: #249d6b;
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+}
