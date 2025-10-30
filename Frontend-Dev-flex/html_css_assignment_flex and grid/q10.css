@@ -1,0 +1,10 @@
+body{margin:0;font-family:Arial,sans-serif}
+.header{display:flex;justify-content:space-between;align-items:center;padding:1rem;background:#4a90e2;color:#fff}
+.nav a{margin-left:1rem;color:white;text-decoration:none}
+.main{display:grid;grid-template-columns:2fr 1fr;gap:1rem;padding:1rem}
+.article .flex-boxes{display:flex;gap:1rem}
+.box{background:#f0f0f0;padding:1rem;border-radius:6px;flex:1;text-align:center}
+.footer{text-align:center;background:#eee;padding:1rem}
+.title{animation:fadeUp 1s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@media(max-width:700px){.main{grid-template-columns:1fr}.article .flex-boxes{flex-direction:column}}

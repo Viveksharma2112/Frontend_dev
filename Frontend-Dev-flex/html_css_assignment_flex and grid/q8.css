@@ -1,0 +1,6 @@
+body{margin:0;font-family:Arial,sans-serif}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;padding:1rem}
+figure{margin:0;overflow:hidden;text-align:center}
+img{width:100%;height:auto;transition:transform 0.5s ease}
+img:hover{transform:scale(1.1)}
+figcaption{padding:.5rem;background:#f0f0f0}

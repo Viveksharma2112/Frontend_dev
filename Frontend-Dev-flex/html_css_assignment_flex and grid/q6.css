@@ -1,0 +1,15 @@
+body{margin:0;font-family:Arial,sans-serif}
+.grid-container{display:grid;grid-template-areas:
+"header header"
+"sidebar main"
+"footer footer";grid-template-columns:1fr 3fr;gap:1rem;padding:1rem}
+.header{grid-area:header;background:#4a90e2;color:white;padding:1rem;text-align:center}
+.sidebar{grid-area:sidebar;background:#f0f0f0;padding:1rem}
+.main{grid-area:main;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.post{background:white;padding:1rem;border-radius:6px}
+.footer{grid-area:footer;text-align:center;background:#eee;padding:1rem}
+@media(max-width:800px){.grid-container{grid-template-areas:
+"header"
+"main"
+"sidebar"
+"footer";grid-template-columns:1fr}.main{grid-template-columns:1fr}}
