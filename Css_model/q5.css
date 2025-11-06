@@ -1,0 +1,23 @@
+/* q5.css - Advanced selectors examples
+   Comments explain each selector used below.
+*/
+*{box-sizing:border-box}
+body{font-family:Tahoma,Arial;margin:24px;}
+/* Attribute selector: targets input elements with type="text" */
+input[type="text"]{padding:8px;border:2px solid #cbd5e1;border-radius:6px;display:block;margin:8px 0;}
+/* Attribute selector: targets links whose href begins with https */
+a[href^="https"]{font-weight:700;text-decoration:none;color:#065f46;}
+/* Pseudo-class: hover changes color */
+a:hover{color:#0ea5a4}
+/* Pseudo-class: focus for accessibility */
+input:focus{outline:3px solid rgba(99,102,241,.18);outline-offset:4px;}
+/* nth-child: style every odd list item */
+nav ul li:nth-child(odd){background:#f1f5f9;padding:8px;border-radius:4px;margin-bottom:6px;}
+/* Combinator: direct child selector (>) - style direct children only */
+nav > ul{list-style:none;padding:0;margin:12px 0;}
+/* Adjacent sibling (+) - style the element immediately after a matching element */
+h1 + form{margin-bottom:12px;}
+/* General sibling (~) - target .special items after previous siblings */
+nav ul li.special ~ li{border-left:4px solid #f97316;padding-left:8px;}
+/* Pseudo-elements: add decorative content before links */
+a::before{content:"• ";color:#06b6d4;}

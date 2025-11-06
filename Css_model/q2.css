@@ -1,0 +1,18 @@
+/* q2.css - Height & Width Practice */
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;margin:0;min-height:100vh;display:flex;flex-direction:column;}
+.fixed-header,.fixed-footer{padding:12px;text-align:center;background:#111827;color:#fff;}
+main.center{flex:1;display:flex;align-items:center;justify-content:center;padding:24px;}
+.boxes{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;}
+.box{
+  color:#fff;padding:12px;border-radius:8px;text-align:center;
+  box-shadow:0 6px 12px rgba(2,6,23,.12);
+}
+.box-a{width:200px;height:150px;background:#2563eb;}
+.box-b{width:60%;min-width:180px;height:20vh;background:#10b981;max-width:520px;overflow:auto;}
+.box-c{width:auto;min-height:80px;padding:20px 28px;background:#f97316;font-size:1em;}
+/* Demonstrate min-height, max-width and overflow in .box-b and .box-c */
+@media (max-width:700px){
+  .boxes{flex-direction:column;}
+  .box-b{width:90%;}
+}

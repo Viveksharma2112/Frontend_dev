@@ -1,0 +1,14 @@
+/* q6.css - Transformations */
+*{box-sizing:border-box}
+body{font-family:Verdana,Segoe UI;margin:0;padding:24px;background:#f8fafc;}
+.wrap{display:flex;gap:20px;justify-content:center;align-items:center;flex-wrap:wrap}
+.demo{text-align:center}
+.block{
+  width:140px;height:100px;border-radius:10px;background:#111827;color:#fff;
+  display:flex;align-items:center;justify-content:center;transition:all .4s ease;
+}
+.rotate:hover .block{transform:rotate(12deg)}
+.scale:hover .block{transform:scale(1.15)}
+.translate:hover .block{transform:translateY(-12px) translateX(6px)}
+.skew:hover .block{transform:skewX(-8deg) skewY(6deg)}
+figcaption{margin-top:8px;font-size:.95rem}

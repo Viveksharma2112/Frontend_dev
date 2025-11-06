@@ -1,0 +1,17 @@
+/* q10.css - Navigation bar with transitions */
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui;background:#f8fafc;color:#0f172a}
+.site-header{background:#111827;color:#fff;padding:8px 16px}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto}
+.logo{font-weight:700;text-decoration:none;color:#fff;margin-right:12px}
+.nav-list{display:flex;gap:12px;list-style:none;margin:0;padding:0}
+.nav-list a{display:block;padding:10px 14px;border-radius:8px;text-decoration:none;color:#e6eef8;transition:all .3s ease;border:1px solid transparent}
+.nav-list a:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.08);background:rgba(255,255,255,.04)}
+.nav-list a.active{background:#2563eb;color:#fff;box-shadow:0 6px 12px rgba(37,99,235,.18)}
+footer{padding:12px;text-align:center;background:#eef2ff;margin-top:20px}
+/* Responsive: stack vertically under 700px */
+@media (max-width:700px){
+  .nav{flex-direction:column;align-items:stretch}
+  .nav-list{flex-direction:column;gap:8px}
+  .nav-list a{padding:12px}
+}

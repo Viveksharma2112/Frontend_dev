@@ -1,0 +1,19 @@
+/* q3.css - Gradient Background Page */
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto;background:#f7fafc;color:#0f172a;display:flex;flex-direction:column;min-height:100vh}
+.site-header{position:fixed;top:0;left:0;right:0;padding:16px;background:rgba(255,255,255,.85);backdrop-filter:blur(4px);z-index:5;text-align:center;}
+main{padding-top:84px;flex:1;}
+.linear{
+  min-height:60vh;padding:40px;
+  background:linear-gradient(120deg,#06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
+  color:white;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+}
+.radial{
+  min-height:60vh;padding:40px;
+  background:radial-gradient(circle at 20% 30%, #f97316 0%, #f43f5e 30%, #111827 100%);
+  color:white;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  background-attachment:fixed;
+}
+footer{padding:12px;text-align:center;background:#0f172a;color:#fff;}

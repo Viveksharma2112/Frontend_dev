@@ -1,0 +1,17 @@
+/* q4.css - Shadows & Depth */
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial;margin:0;padding:24px;background:#eef2ff;color:#0f172a;}
+header{text-align:center;margin-bottom:18px;}
+.cards{display:flex;gap:20px;justify-content:center;align-items:stretch;}
+.card{
+  width:220px;padding:18px;border-radius:12px;background:#fff;
+  transition:box-shadow .28s ease, transform .28s ease;
+  box-shadow:0 6px 16px rgba(2,6,23,.08);
+  text-align:center;
+}
+.card h3{margin:8px 0;text-shadow:0 1px 0 rgba(0,0,0,.04);}
+.card.alt{box-shadow:0 10px 20px rgba(2,6,23,.12)}
+.card.alt2{box-shadow:0 4px 6px rgba(2,6,23,.06)}
+/* Hover lifts the card by increasing shadow and translating up */
+.card:hover{transform:translateY(-12px);box-shadow:0 20px 40px rgba(2,6,23,.18)}
+@media (max-width:800px){.cards{flex-direction:column;align-items:center}}
