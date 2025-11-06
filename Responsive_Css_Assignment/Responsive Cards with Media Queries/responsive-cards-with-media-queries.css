@@ -1,0 +1,39 @@
+/* responsive-cards-with-media-queries.css */
+/* Flexbox cards with 4/2/1 columns via media queries */
+
+:root { --gap: 1rem; --radius: 14px; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: #f8fafc; color: #0f172a; }
+
+.header, .footer { text-align: center; padding: 1rem; }
+
+.container { padding: 1rem; }
+
+.cards {
+  display: flex;
+  gap: var(--gap);
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 calc(25% - var(--gap));
+  min-width: 220px;
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,.07);
+  transition: background .2s ease;
+}
+.card:hover { background: #eef2ff; }
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .card { flex: 1 1 calc(50% - var(--gap)); }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  .card { flex: 1 1 100%; }
+}

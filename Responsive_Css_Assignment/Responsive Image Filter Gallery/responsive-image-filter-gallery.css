@@ -1,0 +1,75 @@
+/* responsive-image-filter-gallery.css */
+/* Layout: CSS Grid with auto-fit, minmax(200px, 1fr) */
+/* Hover removes filter with smooth transition; stacks to 1 column <600px */
+
+:root {
+  --gap: 1rem;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111;
+  background: #f8fafc;
+  line-height: 1.5;
+}
+
+.site-header, .site-footer {
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.subtitle { color: #475569; margin-top: -.25rem; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--gap);
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  transition: filter .35s ease, transform .35s ease;
+}
+
+/* Filters */
+.blur      img { filter: blur(3px); }
+.grayscale img { filter: grayscale(100%); }
+.sepia     img { filter: sepia(100%); }
+.brightness img { filter: brightness(65%); }
+.contrast  img { filter: contrast(175%); }
+.hue       img { filter: hue-rotate(90deg); }
+
+/* Hover removes filter */
+.card:hover img {
+  filter: none;
+  transform: scale(1.02);
+}
+
+figcaption {
+  padding: .75rem 1rem;
+  text-align: center;
+  background: #f1f5f9;
+  font-weight: 600;
+}
+
+/* Stack to one column below 600px */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

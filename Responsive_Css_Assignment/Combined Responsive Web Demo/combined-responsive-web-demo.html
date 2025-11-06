@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Combined Responsive Web Demo</title>
+  <link rel="stylesheet" href="combined-responsive-web-demo.css" />
+</head>
+<body>
+  <!--
+    Q7. Combined Responsive Web Demo
+    - Header+nav (Flexbox)
+    - Main uses Grid with 3 sections
+    - Fade-in animation; stacks <700px
+  -->
+  <header class="topbar">
+    <div class="brand">Responsive Demo</div>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Cheat Sheet</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="grid">
+    <section class="panel gallery">
+      <h2>Image Gallery</h2>
+      <div class="grid-gallery">
+        <img src="https://picsum.photos/id/111/500/350" alt="Random 1"/>
+        <img src="https://picsum.photos/id/112/500/350" alt="Random 2"/>
+        <img src="https://picsum.photos/id/113/500/350" alt="Random 3"/>
+        <img src="https://picsum.photos/id/114/500/350" alt="Random 4"/>
+      </div>
+    </section>
+
+    <section class="panel text">
+      <h2>What is Responsive Design?</h2>
+      <p>
+        Responsive design ensures content looks great on any device by
+        using flexible grids, media queries, and fluid typography.
+      </p>
+    </section>
+
+    <section class="panel cheat">
+      <h2>Cheat Sheet Preview</h2>
+      <ul>
+        <li><strong>Filters:</strong> <code>filter: grayscale(100%);</code></li>
+        <li><strong>Media Queries:</strong> <code>@media (max-width: 700px) { … }</code></li>
+        <li><strong>Typography:</strong> <code>font-size: clamp(1rem, 2vw, 1.5rem);</code></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© 2025 Responsive CSS Exercises</small>
+  </footer>
+</body>
+</html>

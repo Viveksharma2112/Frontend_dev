@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Web Design Layout</title>
+  <link rel="stylesheet" href="responsive-web-design-layout.css" />
+</head>
+<body>
+  <!--
+    Q2. Responsive Web Design Layout
+    - Header with logo left, nav right (Flexbox)
+    - Three feature boxes horizontally, stack <750px
+    - Footer centered
+    - Hover: scale up with transition
+  -->
+  <header class="header">
+    <div class="logo">MyLogo</div>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="features" aria-label="Feature list">
+      <article class="feature">
+        <h2>Fast</h2>
+        <p>Optimized layouts that adapt to any screen size.</p>
+      </article>
+      <article class="feature">
+        <h2>Accessible</h2>
+        <p>Semantic HTML and mindful contrast for everyone.</p>
+      </article>
+      <article class="feature">
+        <h2>Modern</h2>
+        <p>Built with Flexbox and clean, responsive styles.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Responsive CSS Exercises</p>
+  </footer>
+</body>
+</html>

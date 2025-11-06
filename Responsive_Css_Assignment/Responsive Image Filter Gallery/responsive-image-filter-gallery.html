@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Image Filter Gallery</title>
+  <link rel="stylesheet" href="responsive-image-filter-gallery.css" />
+</head>
+<body>
+  <!--
+    Q1. Responsive Image Filter Gallery
+    - CSS Grid gallery with 6 images
+    - Different filters on each
+    - Hover removes filter with transition
+    - Captions below each image
+    - Stacks to one column below 600px
+  -->
+  <header class="site-header">
+    <h1>Responsive Image Filter Gallery</h1>
+    <p class="subtitle">Hover to remove filters</p>
+  </header>
+
+  <main class="gallery">
+    <figure class="card blur">
+      <img src="https://picsum.photos/id/1015/600/400" alt="Mountain lake" />
+      <figcaption>Blur</figcaption>
+    </figure>
+
+    <figure class="card grayscale">
+      <img src="https://picsum.photos/id/1025/600/400" alt="Puppy portrait" />
+      <figcaption>Grayscale</figcaption>
+    </figure>
+
+    <figure class="card sepia">
+      <img src="https://picsum.photos/id/1035/600/400" alt="Forest path" />
+      <figcaption>Sepia</figcaption>
+    </figure>
+
+    <figure class="card brightness">
+      <img src="https://picsum.photos/id/1041/600/400" alt="Sea cliffs" />
+      <figcaption>Brightness</figcaption>
+    </figure>
+
+    <figure class="card contrast">
+      <img src="https://picsum.photos/id/1056/600/400" alt="Desert dunes" />
+      <figcaption>Contrast</figcaption>
+    </figure>
+
+    <figure class="card hue">
+      <img src="https://picsum.photos/id/1069/600/400" alt="City skyline" />
+      <figcaption>Hue Rotate</figcaption>
+    </figure>
+  </main>
+
+  <footer class="site-footer">
+    <small>© 2025 Responsive CSS Exercises</small>
+  </footer>
+</body>
+</html>

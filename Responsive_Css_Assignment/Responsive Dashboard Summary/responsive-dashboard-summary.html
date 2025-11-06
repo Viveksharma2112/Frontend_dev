@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Dashboard Summary</title>
+  <link rel="stylesheet" href="responsive-dashboard-summary.css" />
+</head>
+<body>
+  <!--
+    Q10. Responsive Dashboard Summary
+    - CSS Grid layout with Header, Sidebar, Main
+    - Cards in Main with hover scale+shadow
+    - Load animation; Sidebar moves to top <750px
+  -->
+  <header class="header">Responsive Dashboard</header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav aria-label="Sidebar">
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Filters</a></li>
+          <li><a href="#">Typography</a></li>
+          <li><a href="#">Media Queries</a></li>
+          <li><a href="#">Cheat Sheet Links</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section class="cards">
+        <article class="card"><h2>Filters</h2><p>Use <code>filter</code> to adjust visuals.</p></article>
+        <article class="card"><h2>Typography</h2><p>Scale type with <code>clamp()</code>.</p></article>
+        <article class="card"><h2>Media Queries</h2><p>Adapt at key widths.</p></article>
+        <article class="card"><h2>Cheat Sheet Links</h2><p>Quick references for key ideas.</p></article>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">© 2025 Responsive CSS Exercises</footer>
+</body>
+</html>

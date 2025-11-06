@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Design Principles Summary</title>
+  <link rel="stylesheet" href="responsive-design-principles-summary.css" />
+</head>
+<body>
+  <!--
+    Q9. Responsive Design Principles Summary
+    - Grid layout with 3 boxes
+    - Hover gradient + text color change
+    - Single column <600px
+  -->
+  <main class="grid">
+    <section class="box">
+      <h2>Fluid Layouts</h2>
+      <p>Use relative units and flexible grids to let content flow.</p>
+      <pre><code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</code></pre>
+    </section>
+    <section class="box">
+      <h2>Flexible Media</h2>
+      <p>Constrain images/videos to container width while keeping aspect.</p>
+      <pre><code>img { max-width: 100%; height: auto; }</code></pre>
+    </section>
+    <section class="box">
+      <h2>Breakpoints</h2>
+      <p>Use media queries to adjust layout at key widths.</p>
+      <pre><code>@media (max-width: 600px) { ... }</code></pre>
+    </section>
+  </main>
+</body>
+</html>
