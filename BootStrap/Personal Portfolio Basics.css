@@ -1,0 +1,7 @@
+body {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+.btn:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}

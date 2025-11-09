@@ -1,0 +1,16 @@
+body {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+.card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+header {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+}

@@ -1,0 +1,21 @@
+:root {
+  --bs-primary: #ff5722; 
+  --bs-secondary: #6c757d;
+  --bs-font-sans-serif: 'Poppins', sans-serif;
+}
+body {
+  font-family: var(--bs-font-sans-serif);
+  background-color: #f8f9fa;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+.btn-primary {
+  border-radius: 50px;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}

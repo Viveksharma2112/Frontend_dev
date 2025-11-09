@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Tracker with Badges</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="Task Tracker with Badges.css">
+</head>
+<body class="bg-light">
+  <header class="bg-primary text-white text-center py-4 shadow-sm">
+    <h1 class="fw-bold mb-1">Task Tracker</h1>
+    <p class="mb-2">Stay on top of your daily tasks efficiently</p>
+    <h5>Pending Tasks 
+      <span class="badge bg-warning text-dark ms-2">4</span>
+    </h5>
+  </header>
+  <main class="container my-5">
+    <div class="card shadow p-4">
+      <h2 class="fw-bold mb-4 text-center text-primary">Your To-Do List</h2>
+      <ul class="list-group mb-4">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Finish Bootstrap Assignment
+          <span class="badge bg-danger rounded-pill">High</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Update Project Readme
+          <span class="badge bg-warning text-dark rounded-pill">Medium</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Schedule Team Meeting
+          <span class="badge bg-success rounded-pill">Low</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Submit Expense Report
+          <span class="badge bg-danger rounded-pill">High</span>
+        </li>
+      </ul>
+      <div class="text-center">
+        <button class="btn btn-success px-4">
+          Completed <span class="badge bg-light text-success ms-1">3</span>
+        </button>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <small>&copy; 2025 Task Tracker | Built with Bootstrap 5</small>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

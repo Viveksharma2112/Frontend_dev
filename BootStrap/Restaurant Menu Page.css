@@ -1,0 +1,15 @@
+body {
+  background: linear-gradient(to bottom right, #fff, #f8f9fa);
+}
+.list-group-item:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+}

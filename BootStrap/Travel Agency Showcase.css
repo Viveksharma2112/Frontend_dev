@@ -1,0 +1,18 @@
+body {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+footer {
+  background: linear-gradient(90deg, #212529, #343a40);
+}

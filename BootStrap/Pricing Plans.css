@@ -1,0 +1,17 @@
+.plan-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15) !important;
+}
+
+body {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.bg-primary.plan-card {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Bootstrap Demo </h1>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <div class="container">
+        <div class="bg-light">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-8">
+                        <div class="card shadow">
+                            <div class="card-body p-4">
+                                <h3 class="text-center mb-4">Create an account</h3>
+
+                                <form class="row g-3 needs-validation justify-content-center" novalidate>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label ">Username</label>
+                                        <input type="text" class="form-control" id="username"
+                                            placeholder="Enter username" required>
+                                        <div class="invalid-feedback">Please choose a username.</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="you@example.com" required>
+                                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="phone" class="form-label">Phone number</label>
+                                        <input type="tel" pattern="[0-9+\- ()]{7,20}" class="form-control" id="phone"
+                                            placeholder="+1 (555) 555-5555" required>
+                                        <div class="invalid-feedback">Please provide a valid phone number.</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Create a password" minlength="6" required>
+                                        <div class="invalid-feedback">Please enter a password (min 6 characters).</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="confirmPassword" class="form-label">Confirm password</label>
+                                        <input type="password" class="form-control" id="confirmPassword"
+                                            placeholder="Confirm password" minlength="6" required>
+                                        <div class="invalid-feedback" id="confirmFeedback">Passwords do not match.</div>
+                                    </div>
+
+                                    <fieldset class="col-12">
+                                        <legend class="col-form-label pt-0">Gender</legend>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="genderMale"
+                                                value="male" required>
+                                            <label class="form-check-label" for="genderMale">Male</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="genderFemale"
+                                                value="female" required>
+                                            <label class="form-check-label" for="genderFemale">Female</label>
+                                        </div>
+                                        <div class="invalid-feedback d-block">Please select a gender.</div>
+                                    </fieldset>
+
+                                    <div class="col-12">
+                                        <label for="country" class="form-label">Country</label>
+                                        <select class="form-select" id="country" required>
+                                            <option value="" selected disabled>Choose your country</option>
+                                            <option value="us">United States</option>
+                                            <option value="ca">Canada</option>
+                                            <option value="gb">United Kingdom</option>
+                                            <option value="au">Australia</option>
+                                            <option value="in">India</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select your country.</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="agreeTerms"
+                                                required>
+                                            <label class="form-check-label" for="agreeTerms">
+                                                I agree to the <a href="#">terms and conditions</a>
+                                            </label>
+                                            <div class="invalid-feedback">You must agree before submitting.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-grid">
+                                        <input class="btn btn-primary" type="submit" value="Register">
+                                    </div>
+                                    <div class="col-12 text-center mt-3">Already have an account? <a href="sign.html">Login here</a></div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
