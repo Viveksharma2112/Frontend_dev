@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Q5</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; color: #222; }
+.container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+h1 { margin-top: 0; }
+.field { margin-bottom: 12px; }
+input, select, button, textarea { padding: 8px; font-size: 14px; width: 100%; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+input.invalid, textarea.invalid, select.invalid { border-color: #e74c3c; }
+input.valid, textarea.valid, select.valid { border-color: #2ecc71; }
+.error { color: #e74c3c; font-size: 13px; }
+.success { color: #2ecc71; font-size: 14px; }
+.nav { margin-bottom: 16px; }
+.nav a { margin-right: 10px; text-decoration:none; color:#3498db; }
+.card { padding: 12px; border:1px solid #eee; border-radius:6px; background:#fafafa; }
+small.note { color:#666; }
+</style>
+</head>
+<body>
+<div class="container">
+<nav class="nav"><a href="index.html">Home</a></nav>
+
+<h1>Q5: Movie Ticket Booking</h1>
+<form id="ticketForm" class="card">
+  <div class="field"><label>Name</label><input name="name" required></div>
+  <div class="field"><label>Email</label><input name="email" required></div>
+  <div class="field"><label>Seats (1-10)</label><input name="seats" required></div>
+  <div class="field"><button type="submit">Book</button></div>
+</form>
+<pre id="ticketOut"></pre>
+
+</div>
+<script>
+
+const tf = document.getElementById('ticketForm');
+tf.addEventListener('submit', e=>{
+  e.preventDefault();
+  const name = tf.elements['name'].value.trim();
+  const email = tf.elements['email'].value.trim();
+  const seats = Number(tf.elements['seats'].value);
+  const nameOk = /^[A-Za-z ]+$/.test(name);
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const seatsOk = Number.isInteger(seats) && seats>=1 && seats<=10;
+  const out = document.getElementById('ticketOut');
+  if(!(nameOk && emailOk && seatsOk)){
+    out.textContent = 'Validation failed:\n' + 
+      (nameOk? '': '- Name invalid (alphabets only)\n') +
+      (emailOk? '': '- Email invalid\n') +
+      (seatsOk? '': '- Seats must be integer between 1 and 10\n');
+    return;
+  }
+  const booking = { name, email, seats };
+  out.textContent = 'Booking confirmed:\n' + JSON.stringify(booking, null, 2);
+});
+
+</script>
+</body>
+</html>

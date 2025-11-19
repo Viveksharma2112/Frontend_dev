@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Q2</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; color: #222; }
+.container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+h1 { margin-top: 0; }
+.field { margin-bottom: 12px; }
+input, select, button, textarea { padding: 8px; font-size: 14px; width: 100%; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+input.invalid, textarea.invalid, select.invalid { border-color: #e74c3c; }
+input.valid, textarea.valid, select.valid { border-color: #2ecc71; }
+.error { color: #e74c3c; font-size: 13px; }
+.success { color: #2ecc71; font-size: 14px; }
+.nav { margin-bottom: 16px; }
+.nav a { margin-right: 10px; text-decoration:none; color:#3498db; }
+.card { padding: 12px; border:1px solid #eee; border-radius:6px; background:#fafafa; }
+small.note { color:#666; }
+</style>
+</head>
+<body>
+<div class="container">
+<nav class="nav"><a href="index.html">Home</a></nav>
+
+<h1>Q2: Student Form Validator</h1>
+<form id="stuForm" class="card">
+  <div class="field"><label>Name</label><input id="name" name="name" required></div>
+  <div class="field"><label>Email</label><input id="email" name="email" required></div>
+  <div class="field"><label>Phone</label><input id="phone" name="phone" required></div>
+  <div class="field"><label>Password</label><input id="password" name="password" type="password" required></div>
+  <div class="field"><button type="submit">Submit</button></div>
+  <div id="msg"></div>
+</form>
+
+</div>
+<script>
+
+const form = document.getElementById('stuForm');
+const patterns = {
+  name: /^[A-Za-z ]+$/,
+  email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+  phone: /^\d{10}$/,
+  password: /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{6,}$/
+};
+function validateField(el, name){
+  const val = el.value.trim();
+  const ok = patterns[name].test(val);
+  el.classList.toggle('valid', ok);
+  el.classList.toggle('invalid', !ok);
+  return ok;
+}
+form.addEventListener('input', e=>{
+  if(!e.target.name) return;
+  validateField(e.target, e.target.name);
+});
+form.addEventListener('submit', e=>{
+  e.preventDefault();
+  const name = form.elements['name'];
+  const email = form.elements['email'];
+  const phone = form.elements['phone'];
+  const password = form.elements['password'];
+  const checks = [
+    validateField(name,'name'),
+    validateField(email,'email'),
+    validateField(phone,'phone'),
+    validateField(password,'password')
+  ];
+  const msg = document.getElementById('msg');
+  msg.innerHTML = '';
+  if(checks.every(Boolean)){
+    msg.innerHTML = '<div class="success">Form valid ✅</div>';
+  } else {
+    const errors = [];
+    if(!checks[0]) errors.push('Name: only alphabets allowed');
+    if(!checks[1]) errors.push('Email: invalid format');
+    if(!checks[2]) errors.push('Phone: must be exactly 10 digits');
+    if(!checks[3]) errors.push('Password: 1 uppercase, 1 number, 1 special char');
+    msg.innerHTML = '<div class="error">'+errors.join('<br>')+'</div>';
+  }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Q9</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; color: #222; }
+.container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+h1 { margin-top: 0; }
+.field { margin-bottom: 12px; }
+input, select, button, textarea { padding: 8px; font-size: 14px; width: 100%; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+input.invalid, textarea.invalid, select.invalid { border-color: #e74c3c; }
+input.valid, textarea.valid, select.valid { border-color: #2ecc71; }
+.error { color: #e74c3c; font-size: 13px; }
+.success { color: #2ecc71; font-size: 14px; }
+.nav { margin-bottom: 16px; }
+.nav a { margin-right: 10px; text-decoration:none; color:#3498db; }
+.card { padding: 12px; border:1px solid #eee; border-radius:6px; background:#fafafa; }
+small.note { color:#666; }
+</style>
+</head>
+<body>
+<div class="container">
+<nav class="nav"><a href="index.html">Home</a></nav>
+
+<h1>Q9: Shopping Cart Total</h1>
+<div class="card">
+  <div class="field"><input id="itemName" placeholder="Item name"></div>
+  <div class="field"><input id="itemPrice" placeholder="Price" type="number"></div>
+  <div class="field"><input id="itemQty" placeholder="Quantity" type="number"></div>
+  <div class="field"><button id="addItem">Add Item</button> <button id="calcTotal">Calculate Total</button></div>
+  <div class="field"><input id="coupon" placeholder="Coupon e.g. SAVE20 or DISC10"></div>
+  <pre id="cartOut"></pre>
+</div>
+
+</div>
+<script>
+
+class Cart {
+  constructor(){ this.items = []; }
+  addItem(name,price,qty){ this.items.push({name,price: Number(price),qty: Number(qty)}); }
+  getTotal(){ return this.items.reduce((s,it)=> s + it.price * it.qty, 0); }
+  applyCoupon(code){
+    const m = code.match(/^(SAVE|DISC)(\d{1,2})$/i);
+    if(!m) return {ok:false};
+    const percent = Number(m[2]);
+    const total = this.getTotal();
+    const final = +(total * (1 - percent/100)).toFixed(2);
+    return {ok:true, percent, final, total};
+  }
+}
+const cart = new Cart();
+function render(){
+  document.getElementById('cartOut').textContent = 'Items:\n' + cart.items.map(i=>`${i.name} x${i.qty} - ₹${i.price}`).join('\n') + '\n\nSubtotal: ₹' + cart.getTotal().toFixed(2);
+}
+document.getElementById('addItem').addEventListener('click', ()=>{
+  const n = document.getElementById('itemName').value;
+  const p = document.getElementById('itemPrice').value;
+  const q = document.getElementById('itemQty').value;
+  if(!n||!p||!q) { alert('fill fields'); return; }
+  cart.addItem(n,p,q);
+  render();
+});
+document.getElementById('calcTotal').addEventListener('click', ()=>{
+  const code = document.getElementById('coupon').value.trim();
+  if(!code){ alert('Enter coupon or leave empty'); return; }
+  const res = cart.applyCoupon(code);
+  const out = document.getElementById('cartOut');
+  if(!res.ok) { out.textContent = 'Invalid coupon format. Use SAVE20 or DISC10'; return; }
+  out.textContent = `Subtotal: ₹${res.total.toFixed(2)}\nCoupon: ${res.percent}%\nFinal total: ₹${res.final.toFixed(2)}`;
+});
+render();
+
+</script>
+</body>
+</html>

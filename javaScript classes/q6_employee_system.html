@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Q6</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; color: #222; }
+.container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+h1 { margin-top: 0; }
+.field { margin-bottom: 12px; }
+input, select, button, textarea { padding: 8px; font-size: 14px; width: 100%; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+input.invalid, textarea.invalid, select.invalid { border-color: #e74c3c; }
+input.valid, textarea.valid, select.valid { border-color: #2ecc71; }
+.error { color: #e74c3c; font-size: 13px; }
+.success { color: #2ecc71; font-size: 14px; }
+.nav { margin-bottom: 16px; }
+.nav a { margin-right: 10px; text-decoration:none; color:#3498db; }
+.card { padding: 12px; border:1px solid #eee; border-radius:6px; background:#fafafa; }
+small.note { color:#666; }
+</style>
+</head>
+<body>
+<div class="container">
+<nav class="nav"><a href="index.html">Home</a></nav>
+
+<h1>Q6: Employee Management System</h1>
+<div class="card">
+  <button id="calc">Create 5 employees & calculate annual salaries & total payout</button>
+  <pre id="empOut"></pre>
+</div>
+
+</div>
+<script>
+
+class Employee {
+  constructor(id,name,department,salary){
+    this.id=id; this.name=name; this.department=department; this.salary=salary;
+  }
+  getAnnualSalary(){ return this.salary * 12; }
+  applyBonus(percent){ this.salary = +(this.salary * (1 + percent/100)).toFixed(2); }
+}
+document.getElementById('calc').addEventListener('click', ()=>{
+  const emps = [
+    new Employee(1,'Alice','HR',40000),
+    new Employee(2,'Bob','Eng',60000),
+    new Employee(3,'Charlie','Sales',35000),
+    new Employee(4,'Diana','Eng',55000),
+    new Employee(5,'Eve','Design',45000)
+  ];
+  // apply 5% bonus to all
+  emps.forEach(e=>e.applyBonus(5));
+  const out = emps.map(e=>`${e.name} (ID:${e.id}) - Monthly: ₹${e.salary.toFixed(2)} | Annual: ₹${e.getAnnualSalary().toFixed(2)}`).join('\n');
+  const total = emps.reduce((s,e)=>s+e.getAnnualSalary(),0);
+  document.getElementById('empOut').textContent = out + '\n\nTotal annual payout: ₹' + total.toFixed(2);
+});
+
+</script>
+</body>
+</html>

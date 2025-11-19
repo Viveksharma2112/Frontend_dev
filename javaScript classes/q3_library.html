@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Q3</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; color: #222; }
+.container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+h1 { margin-top: 0; }
+.field { margin-bottom: 12px; }
+input, select, button, textarea { padding: 8px; font-size: 14px; width: 100%; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+input.invalid, textarea.invalid, select.invalid { border-color: #e74c3c; }
+input.valid, textarea.valid, select.valid { border-color: #2ecc71; }
+.error { color: #e74c3c; font-size: 13px; }
+.success { color: #2ecc71; font-size: 14px; }
+.nav { margin-bottom: 16px; }
+.nav a { margin-right: 10px; text-decoration:none; color:#3498db; }
+.card { padding: 12px; border:1px solid #eee; border-radius:6px; background:#fafafa; }
+small.note { color:#666; }
+</style>
+</head>
+<body>
+<div class="container">
+<nav class="nav"><a href="index.html">Home</a></nav>
+
+<h1>Q3: Library Management System</h1>
+<div class="card">
+  <div class="field"><input id="isbnSearch" placeholder="Search ISBN to issue"></div>
+  <div class="field"><button id="issueBtn">Issue Book</button> <button id="showAvailable">Show Available Books</button></div>
+  <pre id="libOut"></pre>
+</div>
+
+</div>
+<script>
+
+class Book {
+  constructor(title,author,isbn){
+    this.title=title; this.author=author; this.isbn=isbn; this.isIssued=false;
+  }
+  issueBook(){ if(this.isIssued) return false; this.isIssued=true; return true; }
+  returnBook(){ this.isIssued=false; }
+  details(){ return `${this.title} — ${this.author} (ISBN: ${this.isbn}) ${this.isIssued? '[Issued]':''}`; }
+}
+const books = [
+  new Book('The Hobbit','J.R.R. Tolkien','9780001'),
+  new Book('1984','George Orwell','9780002'),
+  new Book('Clean Code','Robert C. Martin','9780003'),
+  new Book('You Don’t Know JS','Kyle Simpson','9780004')
+];
+function showAvailable(){
+  const out = books.filter(b=>!b.isIssued).map(b=>b.details()).join('\n') || 'No books available';
+  document.getElementById('libOut').textContent = out;
+}
+document.getElementById('showAvailable').addEventListener('click', showAvailable);
+document.getElementById('issueBtn').addEventListener('click', ()=>{
+  const isbn = document.getElementById('isbnSearch').value.trim();
+  const book = books.find(b=>b.isbn===isbn);
+  const out = document.getElementById('libOut');
+  if(!book) { out.textContent = 'Book not found'; return; }
+  if(book.issueBook()){ out.textContent = 'Book issued:\n' + book.details(); }
+  else { out.textContent = 'Book already issued'; }
+});
+
+</script>
+</body>
+</html>
