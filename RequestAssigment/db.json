@@ -1,0 +1,92 @@
+{
+  "login": [
+    {
+      "username": "user1",
+      "password": "pass1",
+      "id": "b33c"
+    },
+    {
+      "id": "1148",
+      "username": "test",
+      "email": "test@example.com",
+      "password": "Test@123"
+    },
+    {
+      "id": "3f7e",
+      "username": "vs8026704",
+      "email": "vs8026704@gmail.com",
+      "password": "Viv@3456"
+    },
+    {
+      "id": "90f9",
+      "username": "vs8026704",
+      "email": "vs8026704@gmail.com",
+      "password": "Vi@12345"
+    },
+    {
+      "id": "9d5e",
+      "username": "vs6704",
+      "email": "vs6704@gmail.com",
+      "password": "hi@1234556"
+    },
+    {
+      "id": "a4c9",
+      "username": "sair",
+      "email": "sair@gmail.com",
+      "password": "NN@12345"
+    }
+  ],
+  "signUp": [
+    {
+      "username": "newuser1",
+      "password": "newpass1",
+      "email": "newuser1@example.com",
+      "id": "2f2a"
+    },
+    {
+      "id": "e817",
+      "name": "Vivek Sharma",
+      "email": "vs8026704@gmail.com",
+      "phone": "6395509160",
+      "gender": "male",
+      "country": "India",
+      "password": "123"
+    },
+    {
+      "id": "501b",
+      "name": "Vivek Sharma",
+      "email": "vs8026704@gmail.com",
+      "phone": "6395509160",
+      "gender": "male",
+      "country": "India",
+      "password": "567"
+    },
+    {
+      "id": "a3f4",
+      "name": "Vivek Sharma",
+      "email": "vs8026704@gmail.com",
+      "phone": "6395509160",
+      "gender": "male",
+      "country": "India",
+      "password": "123"
+    },
+    {
+      "id": "c869",
+      "name": "saurabh",
+      "email": "sair@gmail.com",
+      "phone": "7395509162",
+      "gender": "female",
+      "country": "India",
+      "password": "345"
+    },
+    {
+      "id": "df9f",
+      "name": "Sheetal",
+      "email": "vs6704@gmail.com",
+      "phone": "9895509160",
+      "gender": "female",
+      "country": "India",
+      "password": "sh123"
+    }
+  ]
+}
