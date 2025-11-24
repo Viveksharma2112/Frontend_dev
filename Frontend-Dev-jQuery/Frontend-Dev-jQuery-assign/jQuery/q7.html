@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q7 – Search Courses</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q7.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #course-search { margin-bottom: 10px; }
+    .course-list li { margin-bottom: 5px; }
+    .highlight-match { font-weight: bold; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Search Courses</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="courses-heading">
+      <h2 id="courses-heading">Available Courses</h2>
+
+      <label for="course-search">Search:</label>
+      <input type="text" id="course-search" placeholder="Type to filter courses...">
+      <button id="clear-search-btn">Clear</button>
+      <p>Matched courses: <span id="match-count">0</span></p>
+
+      <ul class="course-list">
+        <li data-title="Introduction to HTML">Introduction to HTML</li>
+        <li data-title="CSS Fundamentals">CSS Fundamentals</li>
+        <li data-title="JavaScript Basics">JavaScript Basics</li>
+        <li data-title="Advanced jQuery Techniques">Advanced jQuery Techniques</li>
+        <li data-title="Responsive Web Design">Responsive Web Design</li>
+        <li data-title="Backend with Node.js">Backend with Node.js</li>
+        <li data-title="Database Essentials">Database Essentials</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

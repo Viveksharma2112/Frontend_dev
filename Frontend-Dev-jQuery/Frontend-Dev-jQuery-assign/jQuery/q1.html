@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q1 – Welcome Page Greeting</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q1.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    header, main, footer { margin-bottom: 20px; }
+    #greeting { font-size: 1.5rem; cursor: pointer; }
+    #welcome-message { margin-top: 10px; }
+    button { margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome Page Greeting</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="greeting-heading">
+      <h2 id="greeting-heading">Dynamic Greeting</h2>
+      <p id="greeting"></p>
+      <p id="welcome-message">We are happy to see you on our website. Have a great day!</p>
+      <div>
+        <button id="change-greeting-btn">Change Greeting</button>
+        <button id="toggle-welcome-btn">Toggle Welcome Message</button>
+      </div>
+      <ul>
+        <li>Greeting changes based on time of day.</li>
+        <li>Click the greeting to see an alert.</li>
+        <li>Change greeting to a motivational quote.</li>
+        <li>Toggle visibility of the welcome message.</li>
+        <li>Uses jQuery events and DOM manipulation.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 Dynamic Greeting Demo</small>
+  </footer>
+</body>
+</html>

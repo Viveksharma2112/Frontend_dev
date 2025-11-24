@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q4 – Special Offer Banner</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q4.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .controls button { margin-right: 10px; margin-bottom: 10px; }
+    .banner-container { margin-top: 10px; }
+    .banner {
+      padding: 15px;
+      margin-bottom: 10px;
+      background-color: #ffe8c2;
+      border: 1px solid #f0b26b;
+      display: block;
+    }
+    .banner:nth-child(2) { background-color: #e2f7ff; border-color: #8ad0f5; }
+    .banner:nth-child(3) { background-color: #e9ffd8; border-color: #96d56a; }
+    .banner:nth-child(4) { background-color: #f9e1ff; border-color: #d89ce9; }
+    .banner:nth-child(5) { background-color: #ffe1e1; border-color: #f28a8a; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Special Offer Banners</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="offers-heading">
+      <h2 id="offers-heading">Latest Offers</h2>
+      <div class="controls">
+        <button id="hide-btn">Hide Banners</button>
+        <button id="show-btn">Show Banners</button>
+        <button id="slide-toggle-btn">Slide Up/Down</button>
+        <button id="fade-toggle-btn">Fade In/Out</button>
+      </div>
+
+      <div class="banner-container">
+        <div class="banner">🔥 50% OFF on all electronics this weekend only!</div>
+        <div class="banner">🎧 Buy 1 Get 1 Free on headphones.</div>
+        <div class="banner">📦 Free shipping on orders above $50.</div>
+        <div class="banner">💳 Extra 10% instant discount on credit card payments.</div>
+        <div class="banner">🎁 Sign up today and get a welcome gift coupon.</div>
+      </div>
+      <p><em>Banners automatically rotate every 5 seconds.</em></p>
+    </section>
+  </main>
+</body>
+</html>

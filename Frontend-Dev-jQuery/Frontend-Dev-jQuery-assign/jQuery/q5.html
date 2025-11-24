@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q5 – Team Members Directory</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q5.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .department { border: 1px solid #ccc; padding: 10px; margin-bottom: 15px; }
+    .department > h2 { cursor: pointer; }
+    .manager { font-weight: bold; cursor: pointer; }
+    .employee-list { margin-left: 20px; }
+    .employee { cursor: default; }
+    .employee .contact { display: none; font-size: 0.9rem; color: #555; }
+    .highlight { background-color: #fff7cc; }
+    .random-highlight { background-color: #d5f5ff; }
+    button { margin-right: 10px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Team Members Directory</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="directory-heading">
+      <h2 id="directory-heading">Departments</h2>
+      <button id="random-employee-btn">Highlight random employee's siblings</button>
+      <button id="collapse-all-btn">Collapse All Teams</button>
+      <button id="expand-all-btn">Expand All Teams</button>
+
+      <article class="department" data-dept="engineering">
+        <h2 class="dept-title">Engineering Department</h2>
+        <ul class="team">
+          <li class="manager">Alice (Engineering Manager)</li>
+          <ul class="employee-list">
+            <li class="employee"><span class="name">Bob</span><span class="contact"> – bob@company.com</span></li>
+            <li class="employee"><span class="name">Carol</span><span class="contact"> – carol@company.com</span></li>
+            <li class="employee"><span class="name">David</span><span class="contact"> – david@company.com</span></li>
+          </ul>
+        </ul>
+      </article>
+
+      <article class="department" data-dept="marketing">
+        <h2 class="dept-title">Marketing Department</h2>
+        <ul class="team">
+          <li class="manager">Emma (Marketing Manager)</li>
+          <ul class="employee-list">
+            <li class="employee"><span class="name">Frank</span><span class="contact"> – frank@company.com</span></li>
+            <li class="employee"><span class="name">Grace</span><span class="contact"> – grace@company.com</span></li>
+            <li class="employee"><span class="name">Helen</span><span class="contact"> – helen@company.com</span></li>
+          </ul>
+        </ul>
+      </article>
+
+      <article class="department" data-dept="hr">
+        <h2 class="dept-title">Human Resources</h2>
+        <ul class="team">
+          <li class="manager">Ian (HR Manager)</li>
+          <ul class="employee-list">
+            <li class="employee"><span class="name">Jack</span><span class="contact"> – jack@company.com</span></li>
+            <li class="employee"><span class="name">Katy</span><span class="contact"> – katy@company.com</span></li>
+            <li class="employee"><span class="name">Leo</span><span class="contact"> – leo@company.com</span></li>
+          </ul>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q6 – Event Subscription Panel</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q6.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .topic-list li { margin-bottom: 5px; }
+    .success-msg { margin-top: 10px; color: green; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Event Subscription Panel</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="subs-heading">
+      <h2 id="subs-heading">Manage Subscriptions</h2>
+      <button id="subscribe-btn">Subscribe (Enable notifications)</button>
+      <button id="unsubscribe-btn">Unsubscribe (Disable notifications)</button>
+
+      <h3>Available Topics</h3>
+      <ul class="topic-list">
+        <li><button class="topic-btn" data-topic="Webinars">Webinars</button></li>
+        <li><button class="topic-btn" data-topic="Workshops">Workshops</button></li>
+        <li><button class="topic-btn" data-topic="Meetups">Meetups</button></li>
+        <li><button class="topic-btn" data-topic="Newsletters">Newsletters</button></li>
+        <li><button class="topic-btn" data-topic="Promotions">Promotions</button></li>
+      </ul>
+
+      <div>
+        <label>Add new topic:
+          <input type="text" id="new-topic-input" placeholder="e.g. Hackathons">
+        </label>
+        <button id="add-topic-btn">Add Topic</button>
+      </div>
+
+      <div>
+        <label>Remove topic:
+          <input type="text" id="remove-topic-input" placeholder="Exact topic name">
+        </label>
+        <button id="remove-topic-btn">Remove Topic</button>
+      </div>
+
+      <div id="status"></div>
+    </section>
+  </main>
+</body>
+</html>

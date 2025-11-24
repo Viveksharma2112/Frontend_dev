@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q3 – Interactive FAQ</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q3.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .faq-item { border-bottom: 1px solid #ddd; padding: 10px 0; }
+    .question { cursor: pointer; margin: 0; }
+    .answer { display: none; margin-top: 5px; }
+    .focused-question { background-color: #f0f8ff; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Interactive FAQ</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <p>Click a question to toggle the answer. Double-click a question to collapse all answers.</p>
+
+      <article class="faq-item">
+        <h3 class="question" tabindex="0">1. What is jQuery?</h3>
+        <p class="answer">jQuery is a fast, small, and feature-rich JavaScript library.</p>
+        <label>Follow-up question: <input type="text" class="answer-input"></label>
+      </article>
+
+      <article class="faq-item">
+        <h3 class="question" tabindex="0">2. Why use jQuery?</h3>
+        <p class="answer">It simplifies HTML document traversal, event handling, and animations.</p>
+        <label>Follow-up question: <input type="text" class="answer-input"></label>
+      </article>
+
+      <article class="faq-item">
+        <h3 class="question" tabindex="0">3. What is a selector?</h3>
+        <p class="answer">A selector is a pattern used to select DOM elements.</p>
+        <label>Follow-up question: <input type="text" class="answer-input"></label>
+      </article>
+
+      <article class="faq-item">
+        <h3 class="question" tabindex="0">4. What is a callback function?</h3>
+        <p class="answer">A function passed into another function as an argument to be executed later.</p>
+        <label>Follow-up question: <input type="text" class="answer-input"></label>
+      </article>
+
+      <article class="faq-item">
+        <h3 class="question" tabindex="0">5. How do I include jQuery?</h3>
+        <p class="answer">You can include it via CDN using a &lt;script&gt; tag in your HTML.</p>
+        <label>Follow-up question: <input type="text" class="answer-input"></label>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

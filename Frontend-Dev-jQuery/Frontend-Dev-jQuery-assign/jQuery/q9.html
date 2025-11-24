@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q9 – Multi-jQuery Widgets</title>
+  <!-- jQuery version 1 -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    // Release jQuery 1.x to a custom variable
+    var jq1 = jQuery.noConflict(true);
+  </script>
+
+  <!-- jQuery version 2 (using 3.x as a stand-in modern version) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    // Release second jQuery to another variable
+    var jq2 = jQuery.noConflict(true);
+  </script>
+
+  <script src="q9.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .carousel { display: flex; gap: 10px; margin-bottom: 10px; }
+    .slide { padding: 10px; border: 1px solid #ccc; display: none; }
+    .slide.active { display: block; }
+    .widget { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+    .widget.active-widget { background-color: #eaf7ff; }
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal {
+      background: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Multi-jQuery Widgets Dashboard</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Carousel Slider (jQuery v1)</h2>
+      <div class="carousel">
+        <div class="slide active">Slide 1: News</div>
+        <div class="slide">Slide 2: Updates</div>
+        <div class="slide">Slide 3: Tips</div>
+        <div class="slide">Slide 4: Events</div>
+        <div class="slide">Slide 5: Offers</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Widgets</h2>
+      <div class="widget" data-widget="notifications">Notifications Widget</div>
+      <div class="widget" data-widget="tasks">Tasks Widget</div>
+      <div class="widget" data-widget="reports">Reports Widget</div>
+    </section>
+
+    <section>
+      <h2>Modal & Tooltips (jQuery v2)</h2>
+      <button id="open-modal-btn">Open Notification Modal</button>
+
+      <p>
+        Hover over these words to see tooltips:
+        <span class="tooltip-target" data-tip="Short helpful info.">help</span>,
+        <span class="tooltip-target" data-tip="Extra explanation shown on hover.">details</span>,
+        <span class="tooltip-target" data-tip="More tips for users.">tips</span>.
+      </p>
+
+      <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+          <h3>Notifications</h3>
+          <p>You have 3 new notifications.</p>
+          <button id="close-modal-btn">Close</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

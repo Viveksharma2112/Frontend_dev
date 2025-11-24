@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q8 – Dynamic Blog Posts</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q8.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .post { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    .highlight-keyword { background-color: #fff7cc; }
+    .tag { font-size: 0.8rem; background: #eee; padding: 2px 6px; border-radius: 4px; margin-right: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dynamic Blog Posts</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="blog-heading">
+      <h2 id="blog-heading">Blog Admin Panel</h2>
+
+      <button id="add-post-btn">Add New Post</button>
+      <button id="prepend-post-btn">Prepend Featured Post</button>
+      <button id="remove-last-post-btn">Remove Last Post</button>
+      <button id="add-tags-btn">Add Tags to All Posts</button>
+
+      <div>
+        <label>Highlight posts with keyword:
+          <input type="text" id="keyword-input" placeholder="e.g. jQuery">
+        </label>
+        <button id="highlight-btn">Highlight Posts</button>
+      </div>
+
+      <section id="posts-container">
+        <article class="post">
+          <h3>Getting Started with jQuery</h3>
+          <p>Learn how to use jQuery to simplify your JavaScript code.</p>
+        </article>
+
+        <article class="post">
+          <h3>Understanding CSS Flexbox</h3>
+          <p>Flexbox makes it easier to design flexible responsive layout structures.</p>
+        </article>
+
+        <article class="post">
+          <h3>JavaScript ES6 Features</h3>
+          <p>Explore modern JavaScript features like let, const, and arrow functions.</p>
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

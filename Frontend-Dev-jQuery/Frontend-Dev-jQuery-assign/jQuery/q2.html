@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q2 – Product Highlight</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q2.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    header, main { margin-bottom: 20px; }
+    .product-grid { display: flex; flex-wrap: wrap; gap: 15px; }
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 180px;
+      position: relative;
+    }
+    .product h3 { margin: 0 0 5px; }
+    .product .details { display: none; font-size: 0.9rem; margin-top: 5px; }
+    .product .favorite {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    .highlighted { background-color: #fff7cc; }
+    .favorite.selected { color: red; }
+    /* 4. Different style for discounted products using attribute selector */
+    .product[data-discount="true"] {
+      border-color: green;
+      box-shadow: 0 0 5px rgba(0, 128, 0, 0.4);
+    }
+    .badge { display: inline-block; padding: 2px 6px; font-size: 0.8rem; background: #eee; border-radius: 4px; }
+    .discount-badge { background: #d4f7d4; }
+    .out-badge { background: #f7d4d4; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Product Highlight</h1>
+  </header>
+
+  <main>
+    <section aria-labelledby="products-heading">
+      <h2 id="products-heading">Our Products</h2>
+      <p>Click a product to highlight it. Hover to see more details. Click the star to mark as favorite.</p>
+      <div class="product-grid">
+        <article class="product" data-discount="true" data-stock="in">
+          <span class="favorite" title="Mark as favorite">★</span>
+          <h3>Wireless Headphones</h3>
+          <p class="price">$79.99 <span class="badge discount-badge">Discount</span></p>
+          <p class="short">Noise cancelling, 20h battery.</p>
+          <p class="details">Includes carrying case, fast charging and built‑in microphone.</p>
+        </article>
+
+        <article class="product" data-discount="false" data-stock="out">
+          <span class="favorite" title="Mark as favorite">★</span>
+          <h3>Smart Watch</h3>
+          <p class="price">$129.99 <span class="badge out-badge">Out of stock</span></p>
+          <p class="short">Fitness tracking and notifications.</p>
+          <p class="details">Water resistant up to 50m with heart‑rate monitoring.</p>
+        </article>
+
+        <article class="product" data-discount="true" data-stock="in">
+          <span class="favorite" title="Mark as favorite">★</span>
+          <h3>Bluetooth Speaker</h3>
+          <p class="price">$39.99 <span class="badge discount-badge">Discount</span></p>
+          <p class="short">Portable, 10h playtime.</p>
+          <p class="details">Supports stereo pairing and USB‑C charging.</p>
+        </article>
+
+        <article class="product" data-discount="false" data-stock="in">
+          <span class="favorite" title="Mark as favorite">★</span>
+          <h3>Gaming Mouse</h3>
+          <p class="price">$49.99</p>
+          <p class="short">Ergonomic with RGB light.</p>
+          <p class="details">Customizable buttons and adjustable DPI.</p>
+        </article>
+
+        <article class="product" data-discount="true" data-stock="out">
+          <span class="favorite" title="Mark as favorite">★</span>
+          <h3>Mechanical Keyboard</h3>
+          <p class="price">$99.99 <span class="badge discount-badge">Discount</span> <span class="badge out-badge">Out of stock</span></p>
+          <p class="short">Blue switches, backlit.</p>
+          <p class="details">Includes detachable wrist rest and braided cable.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
