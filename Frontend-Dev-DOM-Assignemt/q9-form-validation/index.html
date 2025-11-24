@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Q9 - Form Submit Blocker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Form Validation with preventDefault()</h1>
+        <form id="signup-form" novalidate>
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" />
+                <span class="error" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" />
+                <span class="error" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <input type="password" id="password" />
+                <span class="error" id="password-error"></span>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p id="success-msg" class="success hidden">Form Submitted Successfully!</p>
+    </div>
+    <script src="q9.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #fafafa;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#box {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    border: 2px dashed #2196f3;
+    position: relative;
+    background: #e3f2fd;
+    overflow: hidden;
+}
+
+#coords {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    background: rgba(255,255,255,0.8);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+}
+
+#product-input {
+    width: 65%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+#add-product-btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+#add-product-btn:hover {
+    opacity: 0.9;
+}
+
+#product-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#product-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.product-name {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.btn-group button {
+    margin-left: 5px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #2196f3;
+    color: #fff;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+.edit-input {
+    width: 100%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}

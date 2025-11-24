@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Q6 - Real-Time Table Filter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Student Table Filter</h1>
+        <input type="text" id="search-box" placeholder="Search by name, branch, or CGPA" />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody id="student-body">
+                <tr>
+                    <td>Anushka</td>
+                    <td>CSE</td>
+                    <td>8.5</td>
+                </tr>
+                <tr>
+                    <td>Rohan</td>
+                    <td>ECE</td>
+                    <td>7.9</td>
+                </tr>
+                <tr>
+                    <td>Priya</td>
+                    <td>ME</td>
+                    <td>8.9</td>
+                </tr>
+                <tr>
+                    <td>Aman</td>
+                    <td>CSE</td>
+                    <td>9.1</td>
+                </tr>
+                <tr>
+                    <td>Kritika</td>
+                    <td>IT</td>
+                    <td>7.4</td>
+                </tr>
+            </tbody>
+        </table>
+        <p id="no-results" class="hidden">No results found</p>
+    </div>
+    <script src="q6.js"></script>
+</body>
+</html>

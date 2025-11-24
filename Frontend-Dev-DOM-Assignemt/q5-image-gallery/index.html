@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Q5 - Image Gallery with Modal</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div class="gallery">
+        <!-- You can replace src with your own images -->
+        <img src="https://picsum.photos/seed/1/200/150" alt="Image 1" class="gallery-img" />
+        <img src="https://picsum.photos/seed/2/200/150" alt="Image 2" class="gallery-img" />
+        <img src="https://picsum.photos/seed/3/200/150" alt="Image 3" class="gallery-img" />
+        <img src="https://picsum.photos/seed/4/200/150" alt="Image 4" class="gallery-img" />
+        <img src="https://picsum.photos/seed/5/200/150" alt="Image 5" class="gallery-img" />
+        <img src="https://picsum.photos/seed/6/200/150" alt="Image 6" class="gallery-img" />
+    </div>
+
+    <!-- Modal -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal-content">
+            <img id="modal-image" src="" alt="Preview" />
+        </div>
+    </div>
+
+    <script src="q5.js"></script>
+</body>
+</html>
